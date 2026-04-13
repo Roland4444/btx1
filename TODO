@@ -55,3 +55,246 @@ iex(1)> Synteka.ApiClient.get_offers()
   }],
   "files": {"id": 56}
 }'
+
+
+
+
+
+curl -X 'POST' \
+  'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Тестовый заказ",
+  "project": {"id": 12},
+  "state": "DRAFT",
+  "finishDate": "2026-07-10",
+  "sourceAccount": {"id": 34},
+  "consignee": {"id": 2},
+  "region": {"id": 23},
+  "responsible": {"id": 2},
+  "delay": 30,
+  "externalId": 1744320000,
+  "orderItems": [
+    {
+      "goodName": "Тестовый товар",
+      "count": 1,
+      "unit": {"id": 76},
+      "budgetItem": {"id": 10},
+      "costItem": {"id": 93},
+      "analogAllow": false,
+      "innerComment": "Тест",
+      "goodPosition": {"externalId": "000000004100008693"}
+    }
+  ]
+}'
+{"result":false,"errorMessage":"На проекте Земляные работы. Устройство фундаментов. Дом 2 нет активного бюджета"}
+
+
+
+
+
+curl -X 'POST' \
+  'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Тестовый заказ",
+  "project": {"id": 12},
+  "state": "DRAFT",
+  "finishDate": "2026-07-10",
+  "sourceAccount": {"id": 7},
+  "consignee": {"id": 2},
+  "region": {"id": 23},
+  "responsible": {"id": 2},
+  "delay": 30,
+  "externalId": 1744320000,
+  "orderItems": [
+    {
+      "goodName": "Тестовый товар",
+      "count": 1,
+      "unit": {"id": 76},
+      "budgetItem": {"id": 10},
+      "costItem": {"id": 93},
+      "analogAllow": false,
+      "innerComment": "Тест",
+      "goodPosition": {"externalId": "000000004100008693"}
+    }
+  ]
+}'
+{"result":false,"errorMessage":"На проекте Земляные работы. Устройство фундаментов. Дом 2 нет активного бюджета"}
+
+
+
+
+curl -X 'POST' \
+  'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Тестовый заказ",
+  "project": {"id": 12},
+  "state": "DRAFT",
+  "finishDate": "2026-07-10",
+  "sourceAccount": {"id": 7},
+  "consignee": {"id": 2},
+  "region": {"id": 23},
+  "responsible": {"id": 2},
+  "delay": 30,
+  "externalId": 1744320000,
+  "orderItems": [
+    {
+      "goodName": "Тестовый товар",
+      "count": 1,
+      "unit": {"id": 1},
+      "costItem": {"id": 93},
+      "analogAllow": false,
+      "innerComment": "Тест",
+      "goodPosition": {"externalId": "000000004100008693"}
+    }
+  ]
+}'
+
+
+curl -X 'POST' \
+  'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Тестовый заказ",
+  "project": {"id": 12},
+  "state": "DRAFT",
+  "finishDate": "2026-07-10",
+  "sourceAccount": {"id": 7},
+  "consignee": {"id": 2},
+  "region": {"id": 23},
+  "responsible": {"id": 2},
+  "delay": 30,
+  "externalId": 1744320000,
+  "orderItems": [
+    {
+      "goodName": "Тестовый товар",
+      "count": 1,
+      "unit": {"id": 1},
+      "analogAllow": false,
+      "innerComment": "Тест",
+      "goodPosition": {"externalId": "000000004100008693"}
+    }
+  ]
+}'
+
+{"result":true,"order":{"comment":null,"delay":30,"deliveryAddress":null,"externalId":"1744320000","files":[],"finishDate":"2026-07-10","id":29,"isDeliveryNeed":null,"name":"Тестовый заказ","orderItems":[{"additionalDataJson":null,"unit":{"name":"шт","id":1},"analogAllow":false,"category":null,"costItem":null,"count":1.0,"goodName":"Тестовый товар","goodPosition":null,"id":164,"innerComment":"Тест"}],"project":{"id":12,"name":"Земляные работы. Устройство фундаментов. Дом 2"},"region":{"id":23,"name":"Краснодарский край"},"responsible":{"firstName":"Шадидур","id":2,"lastName":"Рахман","middleName":"Сайфурович"},"sourceAccount":{"company":{"id":7,"name":"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦИАЛИЗИРОВАННЫЙ ЗАСТРОЙЩИК \"РЭС-БАБЕФА\"","shortName":"ООО \"СЗ \"РЭС-БАБЕФА\""},"currentAccount":"40702810905000022125","id":7},"st
+
+
+
+curl -X 'POST' \
+  'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Тестовый заказ АСТРАХАНЬ",
+  "project": {"id": 12},
+  "state": "DRAFT",
+  "finishDate": "2026-07-10",
+  "sourceAccount": {"id": 7},
+  "consignee": {"id": 2},
+  "region": {"id": 30},
+  "responsible": {"id": 2},
+  "delay": 30,
+  "externalId": 1744320000,
+  "orderItems": [
+    {
+      "goodName": "Тестовый товар",
+      "count": 1,
+      "unit": {"id": 1},
+      "analogAllow": false,
+      "innerComment": "Тест",
+      "goodPosition": {"externalId": "000000004100008693"}
+    }
+  ]
+}'
+
+
+
+curl -X 'POST' \
+  'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Тестовый заказ АСТРАХАНЬ + нефть",
+  "project": {"id": 12},
+  "state": "DRAFT",
+  "finishDate": "2026-07-10",
+  "sourceAccount": {"id": 7},
+  "consignee": {"id": 2},
+  "region": {"id": 30},
+  "responsible": {"id": 2},
+  "delay": 30,
+  "externalId": 1744320000,
+  "orderItems": [
+    {
+      "goodName": "Тестовый товар",
+      "count": 1,
+      "unit": {"id": 1},
+      "analogAllow": false,
+      "innerComment": "Тест",
+      "goodPosition": {"externalId": "000000004100008693"}
+    },
+    {
+      "goodName": "Нефть",
+      "count": 100,
+      "unit": {"id": 4},
+      "analogAllow": false,
+      "innerComment": "Сырая нефть",
+      "goodPosition": {"externalId": "000000004100008694"}
+    }
+  ]
+}'
+
+
+Synteka.OrderCreator.create_order(items, name: "Тестовый заказ АСТРАХАНЬ + нефть")
+
+
+items = [
+  %{good_name: "Труба ppr ду25мм (апельсинка)", count: 180, unit_id: 1},
+  %{good_name: "Угол 45град ppr ду25мм", count: 60, unit_id: 1},
+  %{good_name: "Угол 90град ppr ду25мм", count: 40, unit_id: 1},
+  %{good_name: "Заглушка ppr ду25", count: 30, unit_id: 1},
+  %{good_name: "Муфта соед ду25мм ppr", count: 30, unit_id: 1},
+  %{good_name: "Тройник канализационный рыжий 110×50(45град)×110", count: 18, unit_id: 1},
+  %{good_name: "Манжета резиновая 50>25мм", count: 18, unit_id: 1}
+]
+
+# Добавляем external_id для каждой позиции (можно сгенерировать)
+items_with_id = Enum.map(items, fn item ->
+  Map.put(item, :external_id, "ext_#{:erlang.unique_integer([:positive])}")
+end)
+
+# Вызываем создание заказа
+SuperBtrx.OrderCreator.create_order(items_with_id,
+  name: "Заявка на трубы и фитинги",
+  project_id: 12,
+  finish_date: Date.add(Date.utc_today(), 30) |> Date.to_iso8601()
+)
+📌 Выбор библиотеки для HTTP
+HTTPoison — простая, основана на hackney (вы уже её используете).
+
+Req — современная, более удобная (рекомендуется для новых проектов).
+
+Tesla — модульная, с middleware.
+
+Для вашей задачи подойдёт HTTPoison, он уже добавлен в зависимости. Если хотите перейти на Req, добавьте {:req, "~> 0.4"} в mix.exs.
+
+🧪 Проверка
+После формирования списка items_with_id вызовите функцию create_order. Убедитесь, что единицы измерения (unit_id) соответствуют реальным ID в системе (для штук обычно 1). Если API ожидает unit: %{id: ...}, это уже реализовано в вашем модуле.
+
+Если возникнут ошибки (например, неверный unit_id), получите список единиц через API (как обсуждали) и подставьте правильные ID.
+
+Успешной интеграции!
+

@@ -26,6 +26,7 @@ defmodule SuperBtrx.MixProject do
     {:plug_cowboy, "~> 2.6"},
     {:req, "~> 0.5.0"},
     {:jiffy, "~> 1.0"},
+    {:httpoison, "~> 2.0"},
     {:jason, "~> 1.4"}
     ]
   end
