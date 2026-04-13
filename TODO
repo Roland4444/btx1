@@ -14,3 +14,44 @@ iex(1)> Synteka.ApiClient.getoffers()
 
     (super_btrx 0.1.0) Synteka.ApiClient.getoffers()
 iex(1)> Synteka.ApiClient.get_offers()
+
+
+  curl -X 'GET' \
+  'https://zakupay-test.sel-be.ru/api/v1/api/v1/projects?page=12&pageSize=30&isoDate=true&ids=1&include=hierarchy&excludedIds=242&externalId=2&updatedTimeTo=1629374322166&updatedTimeFrom=1629374322166&changeActiveBudgetDateFrom=1629374322166&changeActiveBudgetDateTo=1629374322166' \
+  -H 'accept: application/json' \
+  -H 'ZakupayToken: <TOKEN_VALUE>'
+
+
+    curl --request GET --url 'https://restetris.cynteka.ru/api/v1/offers?count=10&state=DELETED' --header "accept: application/json" --header "ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6"
+
+
+
+   curl --request GET --url 'https://restetris.cynteka.ru/api/v1/projects?pageSize=50' --header "accept: application/json" --header "ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6"
+
+
+    curl -X 'POST'   'https://restetris.cynteka.ru/api/v1/orders?format=json&isoDate=true'   -H 'accept: application/json'   -H 'ZakupayToken: jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6'   -H 'Content-Type: application/json'   -d '{
+  "name": "Мурино",
+  "project": {"id": 3},
+  "state": "DRAFT",
+  "finishDate": "2026-12-19",
+  "comment": "Только самые качественные материалы",
+  "sourceAccount": {"id": 34},
+  "consignee": {"id": 2},
+  "region": {"id": 23},
+  "isDeliveryNeed": true,
+  "deliveryAddress": "ул. Благовещенская, д. 12",
+  "responsible": {"id": 45},
+  "delay": 30,
+  "externalId": 132,
+  "orderItems": [{
+    "goodName": "Кабель ВВГ 3x1.5",
+    "count": 1000,
+    "budgetItem": {"id": 10},
+    "unit": {"id": 76},
+    "costItem": {"id": 93},
+    "analogAllow": false,
+    "innerComment": "Красный",
+    "goodPosition": {"externalId": "000000004100008693"}
+  }],
+  "files": {"id": 56}
+}'

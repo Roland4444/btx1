@@ -25,6 +25,7 @@ defmodule SuperBtrx.MixProject do
     {:phoenix, "~> 1.7.14"},
     {:plug_cowboy, "~> 2.6"},
     {:req, "~> 0.5.0"},
+    {:jiffy, "~> 1.0"},
     {:jason, "~> 1.4"}
     ]
   end

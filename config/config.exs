@@ -4,7 +4,7 @@ config :super_btrx, SuperBtrx.Endpoint,
   server: true,
   secret_key_base: "dummy_secret_key_base_1234567890abcdef"
 
-config :super_btrx, :zakupay_token, ""
+config :super_btrx, :zakupay_token, "jcr827al4vam6ddd18922f10rr6ovpprbk6lneornnkhbjmbitl6"
 
 
 # Загружаем настройки для разработки
